@@ -32,6 +32,7 @@
     }
   ],
   "author": "Marcos Neves <marcos.neves@gmail.com> (https://vuejs-tips.github.io/)",
+  "contributors": ["Jonathan Chan <jonathanczx@gmail.com> (https://github.com/jonathanczx)"],
   "license": "MIT",
   "devDependencies": {
     "babel-jest": "^21.2.0",
