@@ -1,6 +1,6 @@
 # v-money Mask for Vue.js
 
-![The Mask Money](https://cdn-images-1.medium.com/max/600/1*Rpc289FpghuHrnzyVpOUig.gif)
+A version of the v-money package, current differences are the onfocus function where position of cursor has been changed to start of string.
 
 ## Features
 
@@ -107,3 +107,4 @@ Must use `vmodel.lazy` to bind works properly.
 - http://www.xe.com/symbols.php
 - https://github.com/kevinongko/vue-numeric
 - https://github.com/plentz/jquery-maskmoney
+- https://github.com/vuejs-tips/v-money
