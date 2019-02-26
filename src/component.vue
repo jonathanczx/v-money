@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <input type="tel"
          :value="formattedValue"
          @change="change"
