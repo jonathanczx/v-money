@@ -17,8 +17,8 @@ export default function (el, binding) {
   }
 
   el.oninput = function () {
-    var positionFromEnd = el.value.length - el.selectionEnd
-    el.value = format(el.value, opt)
+    var positionFromEnd = el.value.length - el.selectionStart // before formatting cursor left
+    el.value = format(el.value, opt) // add prefix and suffix
     positionFromEnd = Math.max(positionFromEnd, opt.suffix.length) // right
     positionFromEnd = el.value.length - positionFromEnd
     positionFromEnd = Math.max(positionFromEnd, opt.prefix.length + 1) // left
