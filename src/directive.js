@@ -18,16 +18,17 @@ export default function (el, binding) {
 
   el.oninput = function () {
     var positionFromEnd = el.value.length - el.selectionStart // before formatting cursor left
-    el.value = format(el.value, opt) // add prefix and suffix
-    positionFromEnd = Math.max(positionFromEnd, opt.suffix.length) // right
-    positionFromEnd = el.value.length - positionFromEnd
-    positionFromEnd = Math.max(positionFromEnd, opt.prefix.length + 1) // left
-    setCursor(el, positionFromEnd)
+    el.value = format(el.value, opt)
+    positionFromEnd = Math.max(positionFromEnd, opt.suffix.length)
+    var positionFromStart = el.value.length - positionFromEnd
+    positionFromStart = Math.max(positionFromStart, opt.prefix.length + 1)
+    setCursor(el, positionFromStart)
     el.dispatchEvent(event('change')) // v-model.lazy
   }
 
   el.onfocus = function () {
-    // setCursor(el, opt.prefix.length);
+    var positionFromStart = el.value.length - (opt.suffix.length + opt.precision + 1)
+    setCursor(el, positionFromStart)
   }
 
   el.oninput()
